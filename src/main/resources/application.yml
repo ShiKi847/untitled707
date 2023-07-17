@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path:
+    encoding:
+      charset: utf-8
+file:
+  upload:
+    dir: d:/up
+spring:
+  datasource:
+    url: jdbc:mysql:///test
+    username: root
+    password: 198361
+    driver-class-name: com.mysql.jdbc.Driver
+#mybatis:
+#  type-aliases-package: com.example.untitled707.entity
+#  mapper-locations: classpath:mapper/*Mapper.xml
+mybatis-plus:
+  type-aliases-package: com.example.untitled707.entity
+logging:
+  level:
+    rootL: info
+    com.example.untitled707.dao: trace
+    org.springframework.jdbc: trace

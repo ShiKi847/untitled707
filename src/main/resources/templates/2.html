@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p th:text="abc"></p>
+    <p th:text="|${tip} 'abc'|"></p>
+    <p th:text="${3*4}"></p>
+    <p th:text="${3>4 and 4>5}"></p>
+    <p th:text="${3>4 ? '男':'女'}"></p>
+    <p>aaa[[${tip}]]bbb</p>
+<!-- 根节点
+     include自己留,别人不留
+     insert自己留,别人也留
+     replace自己不留,别人留
+   -->
+    <header th:include="~{elements::fr1}"></header>
+    <nav th:insert="~{elements::fr2}"></nav>
+    <footer th:replace="~{elements::fr3}"></footer>
+    <h1>thymeleaf页面</h1>
+    <h1 th:text="${tip}"></h1>
+    <a th:href="@{/hi}">跳转</a>
+</body>
+</html>
